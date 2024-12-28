@@ -1,30 +1,24 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { ref, computed } from 'vue';
+
+const nome = ref('')
+const lista_tarefas = ref([])
+
+const conteudo_input = ref('')
+const lista_tarefas_asc = computed(() => lista_tarefas.value.sort((a, b) => {
+  return b.created_at - a.created_at
+})) // Ordena a lista de tarefas em ordem de criação (ascendente)
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+
+  <main class="app">
+    <section class="saudações">
+      <h2>Seja bem vindo, <input type="text" placeholder="Digite seu nome"
+        v-model="nome"/></h2>
+    </section>
+  </main>
+
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>
