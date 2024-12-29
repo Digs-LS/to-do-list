@@ -1,55 +1,218 @@
-/* Importando o Bootstrap */
-@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+:root {
+	--primary: #EA40A4;
+	--light: #EEE;
+	--grey: #888;
+	--dark: #313154;
+	--perigo: #ff5b57;
 
-/* Estilos personalizados para o aplicativo ToDo */
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-/* Estilo para o corpo da página */
+	--pimary-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'montserrat', sans-serif;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+}
+
 body {
-    background-color: #f8f9fa;
-    font-family: 'Arial', sans-serif;
+	background: var(--light);
+	color: var(--dark);
 }
 
-/* Estilo para o cabeçalho */
-.header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-    text-align: center;
+section {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5em;
 }
 
-/* Estilo para a lista de tarefas */
-.todo-list {
-    list-style-type: none;
-    padding: 0;
+h3 {
+	color: var(--dark);
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 0.5rem;
 }
 
-.todo-list li {
-    background-color: white;
-    border: 1px solid #dee2e6;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+h4 {
+	color: var(--grey);
+	font-size: 0.875rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
 }
 
-/* Estilo para os botões */
-.btn-custom {
-    background-color: #28a745;
-    color: white;
+.saudacao .titulo {
+	display: flex;
 }
 
-.btn-custom:hover {
-    background-color: #218838;
-    color: white;
+.saudacao .titulo input {
+	margin-left: 0.5rem;
+	flex: 1 1 0%;
+	min-width: 0;
 }
 
-/* Estilo para o campo de entrada */
-.input-custom {
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-    margin-bottom: 10px;
+.saudacao .titulo,
+.saudacao .titulo input {
+	color: var(--dark);
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.criar-todo input[type="text"] {
+	display: block;
+	width: 100%;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	color: var(--dark);
+	background-color: #FFF;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1.5rem;
+}
+
+.criar-todo .opcoes {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.criar-todo .opcoes label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem;
+	background-color: #FFF;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+}
+
+.bubble {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid var(--business);
+	box-shadow: var(--business-glow);
+}
+
+.bubble::after {
+	content: "";
+	display: block;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+	background-color: var(--business);
+	box-shadow: var(--business-glow);
+	border-radius: 50%;
+	transition: 0.2s ease-in-out;
+}
+
+input:checked ~ .bubble::after {
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
+.criar-todo .opcoes label div {
+	color: var(--dark);
+	font-size: 1.125rem;
+	margin-top: 1rem;
+}
+
+.criar-todo input[type="submit"] {
+	display: block;
+	width: 100%;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	color: #FFF;
+	background-color: var(--primary);
+	border-radius: 0.5rem;
+	box-shadow: var(--personal-glow);
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.criar-todo input[type="submit"]:hover {
+	opacity: 0.75;
+}
+
+.lista-todo .list {
+	margin: 1rem 0;
+} 
+
+.lista-todo .item-todo {
+	display: flex;
+	align-items: center;
+	background-color: #FFF;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1rem;
+}
+
+.item-todo label {
+	display: block;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+
+.item-todo .conteudo-todo {
+	flex: 1 1 0%;
+}
+
+.item-todo .conteudo-todo input {
+	color: var(--dark);
+	font-size: 1.125rem;
+}
+
+.item-todo .acoes {
+	display: flex;
+	align-items: center;
+}
+
+.item-todo .acoes button {
+	display: block;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	color: #FFF;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.item-todo .acoes button:hover {
+	opacity: 0.75;
+}
+
+.item-todo .acoes .editar {
+	margin-right: 0.5rem;
+	background-color: var(--primary);
+}
+
+.item-todo .acoes .deletar {
+	background-color: var(--danger);
+}
+
+.item-todo.concluido .conteudo-todo input {
+	text-decoration: line-through;
+	color: var(--grey);
 }

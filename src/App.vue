@@ -13,9 +13,10 @@ const lista_tarefas_asc = computed(() => lista_tarefas.value.sort((a, b) => {
 <template>
 
   <main class="app">
-    <section class="saudações">
-      <h2>Seja bem vindo, <input type="text" placeholder="Digite seu nome"
-        v-model="nome"/></h2>
+    <section class="saudacao">
+      <h2 class="titulo">
+        Seja bem vindo, <input type="text" placeholder="Digite seu nome" v-model="nome" />
+      </h2>
     </section>
   </main>
 
