@@ -68,7 +68,7 @@ h4 {
 	font-weight: 700;
 }
 
-.criar-todo input[type="text"] {
+.criar-tarefa input[type="text"] {
 	display: block;
 	width: 100%;
 	font-size: 1.125rem;
@@ -80,14 +80,14 @@ h4 {
 	margin-bottom: 1.5rem;
 }
 
-.criar-todo .opcoes {
+.criar-tarefa .opcoes {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 1rem;
 	margin-bottom: 1.5rem;
 }
 
-.criar-todo .opcoes label {
+.criar-tarefa .opcoes label {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -133,13 +133,13 @@ input:checked ~ .bubble::after {
 	opacity: 1;
 }
 
-.criar-todo .opcoes label div {
+.criar-tarefa .opcoes label div {
 	color: var(--dark);
 	font-size: 1.125rem;
 	margin-top: 1rem;
 }
 
-.criar-todo input[type="submit"] {
+.criar-tarefa input[type="submit"] {
 	display: block;
 	width: 100%;
 	font-size: 1.125rem;
@@ -152,15 +152,15 @@ input:checked ~ .bubble::after {
 	transition: 0.2s ease-in-out;
 }
 
-.criar-todo input[type="submit"]:hover {
+.criar-tarefa input[type="submit"]:hover {
 	opacity: 0.75;
 }
 
-.lista-todo .list {
+.lista-tarefas .list {
 	margin: 1rem 0;
 } 
 
-.lista-todo .item-todo {
+.lista-tarefas .item-tarefa {
 	display: flex;
 	align-items: center;
 	background-color: #FFF;
@@ -170,27 +170,27 @@ input:checked ~ .bubble::after {
 	margin-bottom: 1rem;
 }
 
-.item-todo label {
+.item-tarefa label {
 	display: block;
 	margin-right: 1rem;
 	cursor: pointer;
 }
 
-.item-todo .conteudo-todo {
+.item-tarefa .conteudo-tarefa {
 	flex: 1 1 0%;
 }
 
-.item-todo .conteudo-todo input {
+.item-tarefa .conteudo-tarefa input {
 	color: var(--dark);
 	font-size: 1.125rem;
 }
 
-.item-todo .acoes {
+.item-tarefa .acoes {
 	display: flex;
 	align-items: center;
 }
 
-.item-todo .acoes button {
+.item-tarefa .acoes button {
 	display: block;
 	padding: 0.5rem;
 	border-radius: 0.25rem;
@@ -199,20 +199,20 @@ input:checked ~ .bubble::after {
 	transition: 0.2s ease-in-out;
 }
 
-.item-todo .acoes button:hover {
+.item-tarefa .acoes button:hover {
 	opacity: 0.75;
 }
 
-.item-todo .acoes .editar {
+.item-tarefa .acoes .editar {
 	margin-right: 0.5rem;
 	background-color: var(--primary);
 }
 
-.item-todo .acoes .deletar {
+.item-tarefa .acoes .deletar {
 	background-color: var(--danger);
 }
 
-.item-todo.concluido .conteudo-todo input {
+.item-tarefa.concluido .conteudo-tarefa input {
 	text-decoration: line-through;
 	color: var(--grey);
 }
