@@ -1,3 +1,6 @@
+# Alternate Branch
+Branch/ramo de desenvolvimento, com o propósito primário de testes e avaliações de boas práticas e novas implementações, e suas alterações não deverão ser avaliadas para os testes práticos como as implementadas na 'main' branch.
+
 ## Diferença entre `var`, `let` e `const`
 
 ### `var`
