@@ -10,11 +10,12 @@
     "test": "standard & node tests.js"
   },
   "dependencies": {
+    "to-do-list": "file:",
     "vue": "^3.5.13"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
-    "vite": "^6.0.5",
-    "standard": "*"
+    "standard": "*",
+    "vite": "^6.0.5"
   }
 }
