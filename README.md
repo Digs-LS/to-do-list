@@ -6,25 +6,30 @@ Esta é uma aplicação de lista de afazeres (to-do list) simples, construída c
 ## Como utilizar o programa
 ### Pré-requisitos
 I - Node.js (versão 14 ou superior);
+
 II - npm (versão 6 ou superior);
 
 ### Instalação
 1. Clone o repositório em sua máquina, no diretório de sua escolha:
 ```sh
    git clone https://github.com/your-username/to-do-list-app.git
+```
 
 2. Navegue para o diretório do projeto:
 ```sh
    cd ./to-do-list-app
+```
 
 3. Instale as dependências:
 ```sh
    npm install
+```
 
 ### Executando a aplicação
 Para iniciar o servidor de desenvolvimento, execute o seguinte comando no Terminal:
 ```sh
    npm run dev
+```
 
 Isso iniciará o servidor de desenvolvimento, permitindo que possa acessar a aplicação pelo navegador no endereço http://localhost:3000, onde terá acesso às funcionalidades do programa.
 
