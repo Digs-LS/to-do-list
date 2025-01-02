@@ -12,7 +12,7 @@ II - npm (versão 6 ou superior);
 ### Instalação
 1. Clone o repositório em sua máquina, no diretório de sua escolha:
 ```sh
-   git clone https://github.com/your-username/to-do-list-app.git
+   git clone https://github.com/Digs-LS/to-do-list-app.git
 ```
 
 2. Navegue para o diretório do projeto:
